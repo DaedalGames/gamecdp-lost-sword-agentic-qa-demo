@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "roadmap-issue-operation-plan.v1",
+  "repo": "DaedalGames/gamecdp",
+  "status": "noop",
+  "dryRun": true,
+  "closeCommands": [],
+  "entries": [
+    {
+      "issue": 195,
+      "title": "Autonomous exploratory QA loop and edge-case discovery",
+      "operation": "noop",
+      "closeAllowed": false,
+      "commentBody": "Still open-blocked by machine-readable evidence gate.\n\nPassed criteria: none\nBlocking criteria:\n- live-dynamic-branching: No live artifact proves that observations added new QA branches during the run.\n- evidence-changed-decision: No live artifact proves that a prior failure or observation changed the next decision.\n- edge-case-frontier: Edge-case generation is not proven in the live customer artifact.\n- live-artifact: Exploratory behavior is currently unit-tested/planned but not live-proven.\nEvidence: roadmap-issue-readiness.json\n\nNo close command is allowed until closeCommandAllowed=true.",
+      "reason": "Issue remains open, but blocker fingerprint is unchanged; do not add another status comment.",
+      "blockerFingerprint": "fp-1gjfhj3",
+      "previousBlockerFingerprint": "fp-1gjfhj3",
+      "changedSincePrevious": false
+    },
+    {
+      "issue": 199,
+      "title": "Parallel QA orchestrator and automatic recovery/refinement loop",
+      "operation": "noop",
+      "closeAllowed": false,
+      "commentBody": "Still open-blocked by machine-readable evidence gate.\n\nPassed criteria: none\nBlocking criteria:\n- multi-worker-live: No live multi-worker/device/account run is attached.\n- failed-worker-visible: Best trace is not yet proven to preserve failed/blocked worker receipts in customer-safe form.\n- mutation-account-isolation: Parallel mutation account isolation is not live-proven.\n- recovery-transitions: Recovery transitions exist in single-run traces but not as a live parallel/refinement artifact.\nEvidence: roadmap-issue-readiness.json\n\nNo close command is allowed until closeCommandAllowed=true.",
+      "reason": "Issue remains open, but blocker fingerprint is unchanged; do not add another status comment.",
+      "blockerFingerprint": "fp-12sg6im",
+      "previousBlockerFingerprint": "fp-12sg6im",
+      "changedSincePrevious": false
+    },
+    {
+      "issue": 200,
+      "title": "Canonical mutation delta events and live proof sources",
+      "operation": "noop",
+      "closeAllowed": false,
+      "commentBody": "Still open-blocked by machine-readable evidence gate.\n\nPassed criteria: battle-entry-delta, missing-delta-blockers\nBlocking criteria:\n- non-battle-delta: No reward/character/summon/item/purchase live mutation delta proof is accepted.\n- duplicate-prevention-delta: No duplicate-prevention/no-second-delta proof is accepted for a non-battle mutation.\nEvidence: roadmap-issue-readiness.json\n\nNo close command is allowed until closeCommandAllowed=true.",
+      "reason": "Issue remains open, but blocker fingerprint is unchanged; do not add another status comment.",
+      "blockerFingerprint": "fp-1t56hvd",
+      "previousBlockerFingerprint": "fp-1t56hvd",
+      "changedSincePrevious": false
+    },
+    {
+      "issue": 201,
+      "title": "Executable QA coverage scheduler and completion matrix",
+      "operation": "noop",
+      "closeAllowed": false,
+      "commentBody": "Still open-blocked by machine-readable evidence gate.\n\nPassed criteria: no-silent-omissions, terminal-accounting\nBlocking criteria:\n- all-eligible-attempted: Current take is customer-slice, not full eligible-leaf execution.\n- regression-mode: Current artifact is not a regression scheduler run.\nEvidence: roadmap-issue-readiness.json\n\nNo close command is allowed until closeCommandAllowed=true.",
+      "reason": "Issue remains open, but blocker fingerprint is unchanged; do not add another status comment.",
+      "blockerFingerprint": "fp-1s3bz8a",
+      "previousBlockerFingerprint": "fp-1s3bz8a",
+      "changedSincePrevious": false
+    },
+    {
+      "issue": 25,
+      "title": "SSOT semantic compiler for mobile game QA",
+      "operation": "noop",
+      "closeAllowed": false,
+      "commentBody": "Still open-blocked by machine-readable evidence gate.\n\nPassed criteria: customer-demo-package, strict-demo-ready\nBlocking criteria:\n- open-child-issues-closed: Parent cannot close while #195, #199, #200, or #201 remain open-blocked.\n- semantic-compiler-live-scope: The live product does not yet prove real-time LLM checklist expansion plus broad eligible TC automation.\nEvidence: roadmap-issue-readiness.json\n\nNo close command is allowed until closeCommandAllowed=true.",
+      "reason": "Issue remains open, but blocker fingerprint is unchanged; do not add another status comment.",
+      "blockerFingerprint": "fp-00dtxop",
+      "previousBlockerFingerprint": "fp-00dtxop",
+      "changedSincePrevious": false
+    }
+  ],
+  "guardrails": [
+    "Never close an issue unless closeAllowed=true in the machine-readable readiness report.",
+    "Do not post repeated status comments when blockers are unchanged; unchanged blocked issues must be noop.",
+    "Update the evidence artifact and customer package instead of using comments as proof.",
+    "Do not claim semantic compiler completion while parent issue #25 is open-blocked.",
+    "Customer demos may use only QC-passed packages with customer-visible leak checks."
+  ]
+}

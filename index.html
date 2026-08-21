@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="GameCDP Lost Sword agentic QA demo: battle mutation proof with oracle-backed evidence and QC-gated media.">
+  <title>GameCDP Lost Sword Agentic QA Demo</title>
+  <style>
+    :root{color-scheme:dark;--bg:#07090d;--panel:#10141b;--panel2:#151b24;--line:#273241;--text:#eef3f8;--muted:#96a6b8;--green:#4ee184;--blue:#67a7ff;--amber:#ffd166;--red:#ff6b6b}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#07090d;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:0}a{color:inherit}.hero{min-height:100svh;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(420px,.98fr);gap:28px;align-items:center;padding:28px 36px 40px;background:linear-gradient(90deg,rgba(7,9,13,.98),rgba(7,9,13,.88) 46%,rgba(7,9,13,.45)),url('assets/evidence-contact-sheet.png') center/cover no-repeat}.copy{max-width:720px}.eyebrow{font-size:12px;font-weight:800;color:var(--blue);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px}.h1{font-size:58px;line-height:.96;font-weight:850;margin:0 0 18px}.lead{font-size:19px;line-height:1.55;color:#c9d4e0;margin:0 0 26px}.proof{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}.pill{border:1px solid rgba(255,255,255,.16);background:rgba(16,20,27,.78);border-radius:999px;padding:9px 12px;font-size:13px;color:#d8e2ed}.pill strong{color:var(--green)}.cta{display:flex;flex-wrap:wrap;gap:12px}.btn{border:1px solid rgba(255,255,255,.18);background:#f2f6fb;color:#0b1118;text-decoration:none;border-radius:8px;padding:12px 15px;font-weight:800;font-size:14px}.btn.secondary{background:rgba(255,255,255,.06);color:var(--text)}.stage{border:1px solid rgba(255,255,255,.14);background:rgba(12,15,21,.72);box-shadow:0 24px 70px rgba(0,0,0,.48);border-radius:10px;overflow:hidden}.stagebar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.12);font-size:12px;color:var(--muted)}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green);margin-right:7px}.stage video{display:block;width:100%;aspect-ratio:16/9;background:#000;object-fit:contain}.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line)}.metric{background:rgba(17,22,31,.96);padding:16px}.metric b{display:block;font-size:24px;line-height:1;color:var(--green);margin-bottom:7px}.metric span{font-size:12px;color:var(--muted);line-height:1.35}.section{padding:58px 36px;max-width:1240px;margin:0 auto}.section h2{font-size:28px;margin:0 0 18px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--panel2),var(--panel));border-radius:8px;padding:18px}.card h3{font-size:16px;margin:0 0 9px}.card p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}.timeline{display:grid;gap:10px}.event{display:grid;grid-template-columns:150px 1fr;gap:14px;border:1px solid var(--line);background:rgba(16,20,27,.78);border-radius:8px;padding:14px}.event .k{font-size:12px;font-weight:800;color:var(--blue);text-transform:uppercase}.event .v{font-size:14px;line-height:1.48;color:#d9e3ed}.scope{border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.55}.downloads{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.downloads a{font-size:13px;text-decoration:none;border:1px solid var(--line);padding:9px 11px;border-radius:8px;background:rgba(255,255,255,.04)}@media(max-width:980px){.hero{grid-template-columns:1fr;padding:22px 18px}.h1{font-size:40px}.lead{font-size:16px}.strip,.grid{grid-template-columns:1fr 1fr}.section{padding:40px 18px}.event{grid-template-columns:1fr}}@media(max-width:560px){.strip,.grid{grid-template-columns:1fr}.h1{font-size:34px}}
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <section class="copy">
+      <div class="eyebrow">GameCDP Agentic Mobile Game QA</div>
+      <h1 class="h1">Lost Sword 전투 진입을 에이전트가 직접 실행하고 검증합니다.</h1>
+      <p class="lead">단순 smoke나 화면 변화가 아니라, 실제 기기에서 전투 진입 mutation을 수행하고 <strong>battle.entry</strong> 도메인 이벤트와 QC gate를 통과한 evidence만 데모로 보여줍니다.</p>
+      <div class="proof">
+        <div class="pill"><strong>PASS</strong> Exec@k</div>
+        <div class="pill"><strong>PASS</strong> OraclePass@k</div>
+        <div class="pill"><strong>PASS</strong> GameQA@k</div>
+        <div class="pill"><strong>25/25</strong> Pre-encode QC</div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="assets/lost-sword-agentic-qa-1080p.mp4">Download 1080p MP4</a>
+        <a class="btn secondary" href="assets/lost-sword-agentic-qa.gif">Download GIF</a>
+        <a class="btn secondary" href="#evidence">View Evidence</a>
+      </div>
+    </section>
+    <section class="stage" aria-label="Lost Sword QA demo video">
+      <div class="stagebar"><span><i class="dot"></i>QC-gated demo media</span><span>52s · 30fps · oracle backed</span></div>
+      <video controls autoplay muted loop playsinline poster="assets/evidence-contact-sheet.png"><source src="assets/lost-sword-agentic-qa-1080p.mp4" type="video/mp4"></video>
+      <div class="strip">
+        <div class="metric"><b>1</b><span>executed mutation flow</span></div>
+        <div class="metric"><b>battle.entry</b><span>canonical domain event</span></div>
+        <div class="metric"><b>0</b><span>failed QA steps</span></div>
+        <div class="metric"><b>no leaks</b><span>customer-visible artifact gate</span></div>
+      </div>
+    </section>
+  </main>
+
+  <section id="evidence" class="section">
+    <h2>왜 이 장면이 데모로 의미가 있는가</h2>
+    <div class="grid">
+      <article class="card"><h3>Agent action, not a mock</h3><p>녹화는 기존 take의 실제 실행 증거에서 생성됐고, 전투 진입 action graph가 pass된 케이스만 customer media로 승격됐습니다.</p></article>
+      <article class="card"><h3>Oracle-backed result</h3><p>idle animation이나 banner rotation 같은 visual delta가 아니라 <strong>battle.entry</strong> canonical event와 battle.start mutation proof가 있어야 PASS입니다.</p></article>
+      <article class="card"><h3>QC before media</h3><p>MP4/GIF는 checklist, mutation proof, overlay occlusion, customer-visible leak, contact sheet gate를 통과한 뒤에만 생성됩니다.</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Evidence stream</h2>
+    <div class="timeline">
+      <div class="event"><div class="k">Observe</div><div class="v">Lost Sword lobby and battle affordances are read from live screenshots and semantic scene data.</div></div>
+      <div class="event"><div class="k">Act</div><div class="v">GameCDP selects the battle.start semantic flow and executes the player-like transition into battle content.</div></div>
+      <div class="event"><div class="k">Verify</div><div class="v">Domain oracle accepts <strong>battle.entry</strong> and <strong>battle.start mutation</strong>; unproven reward/character/summon/item mutations are not shown as PASS.</div></div>
+      <div class="event"><div class="k">Publish</div><div class="v">Pre-encode QC passes 25/25 checks, then MP4/GIF assets are produced for this customer demo.</div></div>
+    </div>
+    <div class="downloads">
+      <a href="evidence-summary.json">Evidence summary JSON</a>
+      <a href="demo-selection.json">Demo selection manifest</a>
+      <a href="issue-ops-current.json">Issue operation policy</a>
+      <a href="recording-launch-policy.json">Recording launch policy</a>
+      <a href="assets/lost-sword-agentic-qa-source.mp4">Source-resolution MP4</a>
+    </div>
+  </section>
+
+  <section class="section scope">
+    <strong>Scope:</strong> 이 페이지는 현재 고객에게 가장 강하게 보여줄 수 있는 Lost Sword battle mutation vertical slice입니다. Full semantic compiler 데모는 별도 목표이며, live gate가 playable 상태로 열리고 non-battle mutation delta, duplicate/no-second-delta proof, dynamic QA-tree expansion, broad coverage scheduler evidence가 추가되어야 합니다.
+  </section>
+</body>
+</html>

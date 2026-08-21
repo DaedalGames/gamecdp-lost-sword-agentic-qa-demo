@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "lost-sword-customer-recording-launch-policy.v1",
+  "status": "recording-blocked",
+  "recordingAllowed": false,
+  "selectedCommandAvailable": false,
+  "blockedReason": "Lost Sword is showing a server maintenance gate; recording a mutation QA demo would be false evidence.",
+  "gateSummary": {
+    "status": "recording-blocked",
+    "sceneId": "service_maintenance",
+    "reason": "Lost Sword is showing a server maintenance gate; recording a mutation QA demo would be false evidence.",
+    "nextAction": "Wait until maintenance ends, then rerun lost-sword-live-demo-gate before starting MP4/GIF recording.",
+    "hiddenAuditFields": [
+      "absolute artifact paths",
+      "raw frame bytes",
+      "raw coordinates"
+    ]
+  },
+  "mp4GifPolicy": {
+    "mayRenderMp4Gif": false,
+    "reason": "MP4/GIF rendering is blocked because the live demo gate did not allow recording."
+  },
+  "requiredBeforeRun": [
+    "Wait until maintenance ends, then rerun lost-sword-live-demo-gate before starting MP4/GIF recording.",
+    "Rerun the live gate and require recordingAllowed=true.",
+    "Run pre-encode QC after the checklist completes; render MP4/GIF only if QC status is allowed."
+  ],
+  "hiddenAuditFields": [
+    "selected recording command",
+    "absolute output directory",
+    "device serial when not customer-safe"
+  ]
+}

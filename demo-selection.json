@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "lost-sword-demo-selection.v1",
+  "status": "selected",
+  "selectedDemo": {
+    "id": "lost-sword-battle-mutation-vertical-slice",
+    "title": "Lost Sword battle mutation vertical slice",
+    "purpose": "Customer-safe proof that GameCDP can execute a semantic battle.start flow and validate it with oracle-backed mutation evidence.",
+    "claimBoundary": [
+      "Proves the recorded customer slice only.",
+      "Executed mutation flows: 15c-battle-start-mutation-executed.",
+      "Does not prove full real-time LLM checklist expansion or broad eligible TC automation."
+    ],
+    "assets": [
+      "assets/lost-sword-demo-overlay.mp4",
+      "assets/lost-sword-demo-gameplay.mp4",
+      "assets/lost-sword-demo-overlay.gif",
+      "assets/lost-sword-audit-scroll.mp4",
+      "assets/pre-encode-contact-sheet.png"
+    ]
+  },
+  "blockedTargetDemo": {
+    "id": "lost-sword-full-semantic-compiler-wow-demo",
+    "title": "Full semantic compiler QA demo",
+    "blockers": [
+      "Open readiness blockers: #195, #199, #200, #201, #25",
+      "Live blocker: service_maintenance - Lost Sword is showing a server maintenance gate; mutation QA must wait until the game returns to playable lobby/content. until 2026-08-21 12:00 KST",
+      "No GitHub issue close commands are currently allowed by the evidence gate."
+    ],
+    "nextRequiredEvidence": [
+      "Live dynamic branch expansion where observations add or refine QA checklist leaves.",
+      "At least one accepted non-battle mutation delta plus duplicate-prevention/no-second-delta proof.",
+      "Regression coverage matrix proving every eligible generated leaf was attempted or terminal-blocked.",
+      "Parallel or recovery run preserving failed attempts and account-isolation receipts.",
+      "A fresh QC-passed MP4/GIF generated only after the above evidence passes pre-encode QC."
+    ],
+    "requiredFinalDemoVideo": {
+      "title": "Lost Sword full semantic compiler wow demo",
+      "minimumResolution": "1920x1080 MP4 plus customer-safe GIF derivative",
+      "narrativeBeats": [
+        "Live gate verifies Lost Sword is foreground, playable, and not blocked by maintenance/auth/store/update screens.",
+        "Semantic compiler observes the current screen and expands a 3-4 level QA tree from lobby into battle, treasure, character, inventory/item, summon-entry, shop/paid guard, recovery, and edge-case branches.",
+        "Agent executes player-like actions from semantic targets, not raw coordinate labels, while the overlay shows only observation, selected intent, oracle, and result.",
+        "Battle path enters stage/combat/result surfaces and records domain events such as battle.entry, combat/result transition, reward/result-card evidence, or explicit terminal blockers.",
+        "Non-battle mutation path records at least one reward/character/item/free-summon mutation delta and then a duplicate/no-second-delta prevention check.",
+        "Recovery path intentionally handles hidden HUD, modal, loading, maintenance, or unknown scene transitions and shows the decision changing from evidence.",
+        "Final coverage matrix proves every generated eligible leaf was executed or terminal-blocked with reason; skipped work is never shown as PASS."
+      ],
+      "proofGates": [
+        "MP4/GIF may render only after pre-encode QC passes.",
+        "Each mutation PASS requires before/action/after evidence plus a canonical domain delta event.",
+        "LLM/planner expansion is claimable only when persisted dynamicBranchesAdded and decisionsChangedByEvidence are positive.",
+        "Issue close is allowed only when roadmap-issue-readiness reports closeCommandAllowed=true.",
+        "Customer-visible artifacts must not expose raw coordinates, raw frame files, absolute temp paths, hashes, or internal commands."
+      ],
+      "shouldNotShow": [
+        "A long static checklist covering the gameplay.",
+        "Raw coordinate actions such as tap(x,y).",
+        "Raw frame artifact names or absolute temp paths as customer evidence.",
+        "Issue status comments as proof of implementation.",
+        "Maintenance/auth/store/update screens represented as QA success."
+      ]
+    }
+  },
+  "issueCloseGate": {
+    "status": "open-blockers",
+    "closeCommandsAllowed": 0,
+    "openBlockedIssues": [
+      "#195",
+      "#199",
+      "#200",
+      "#201",
+      "#25"
+    ]
+  },
+  "mustNotClaim": [
+    "Do not claim the semantic compiler is complete while any roadmap issue is open-blocked.",
+    "Do not claim reward, purchase, enhancement, summon, or item-use mutation success without canonical delta evidence.",
+    "Do not use server maintenance, Play Store, auth, or update screens as QA success evidence.",
+    "Do not render MP4/GIF for a blocked live run."
+  ]
+}
