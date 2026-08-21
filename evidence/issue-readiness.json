@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "roadmap-issue-readiness.v1",
+  "status": "open-blockers",
+  "results": [
+    {
+      "issue": 195,
+      "title": "Autonomous exploratory QA loop and edge-case discovery",
+      "status": "open-blocked",
+      "passedCriteria": [],
+      "blockers": [
+        "live-dynamic-branching: No live artifact proves that observations added new QA branches during the run.",
+        "evidence-changed-decision: No live artifact proves that a prior failure or observation changed the next decision.",
+        "edge-case-frontier: Edge-case generation is not proven in the live customer artifact.",
+        "live-artifact: Exploratory behavior is currently unit-tested/planned but not live-proven."
+      ],
+      "closeCommandAllowed": false,
+      "nextEvidenceRequired": [
+        "Run artifact with dynamicBranchesAdded > 0.",
+        "Planner/executor report where evidence changes branch choice or retry strategy.",
+        "Live exploratory report with positive, blocked, recovery, and mutation/edge branches.",
+        "A persisted live exploratory QA report linked from the customer take."
+      ]
+    },
+    {
+      "issue": 199,
+      "title": "Parallel QA orchestrator and automatic recovery/refinement loop",
+      "status": "open-blocked",
+      "passedCriteria": [],
+      "blockers": [
+        "multi-worker-live: No live multi-worker/device/account run is attached.",
+        "failed-worker-visible: Best trace is not yet proven to preserve failed/blocked worker receipts in customer-safe form.",
+        "mutation-account-isolation: Parallel mutation account isolation is not live-proven.",
+        "recovery-transitions: Recovery transitions exist in single-run traces but not as a live parallel/refinement artifact."
+      ],
+      "closeCommandAllowed": false,
+      "nextEvidenceRequired": [
+        "Parallel run artifact with at least two workers.",
+        "Aggregate report exposing selected and failed workers.",
+        "Distinct account or resettable-state receipts for mutation workers.",
+        "Parallel report containing foreground/hud/modal/loading recovery receipts."
+      ]
+    },
+    {
+      "issue": 200,
+      "title": "Canonical mutation delta events and live proof sources",
+      "status": "open-blocked",
+      "passedCriteria": [
+        "battle-entry-delta",
+        "missing-delta-blockers"
+      ],
+      "blockers": [
+        "non-battle-delta: No reward/character/summon/item/purchase live mutation delta proof is accepted.",
+        "duplicate-prevention-delta: No duplicate-prevention/no-second-delta proof is accepted for a non-battle mutation."
+      ],
+      "closeCommandAllowed": false,
+      "nextEvidenceRequired": [
+        "Before/action/after accepted non-battle mutation delta event.",
+        "Accepted duplicate-prevention event such as reward.no-second-delta, inventory.no-second-delta, currency.no-second-delta, claim.disabled, or reward.already-claimed."
+      ]
+    },
+    {
+      "issue": 201,
+      "title": "Executable QA coverage scheduler and completion matrix",
+      "status": "open-blocked",
+      "passedCriteria": [
+        "no-silent-omissions",
+        "terminal-accounting"
+      ],
+      "blockers": [
+        "all-eligible-attempted: Current take is customer-slice, not full eligible-leaf execution.",
+        "regression-mode: Current artifact is not a regression scheduler run."
+      ],
+      "closeCommandAllowed": false,
+      "nextEvidenceRequired": [
+        "single-worker-regression or parallel-regression report proving all eligible leaves were attempted or terminal-blocked.",
+        "Coverage artifact with mode single-worker-regression or parallel-regression."
+      ]
+    },
+    {
+      "issue": 25,
+      "title": "SSOT semantic compiler for mobile game QA",
+      "status": "open-blocked",
+      "passedCriteria": [
+        "customer-demo-package",
+        "strict-demo-ready"
+      ],
+      "blockers": [
+        "open-child-issues-closed: Parent cannot close while #195, #199, #200, or #201 remain open-blocked.",
+        "semantic-compiler-live-scope: The live product does not yet prove real-time LLM checklist expansion plus broad eligible TC automation."
+      ],
+      "closeCommandAllowed": false,
+      "nextEvidenceRequired": [
+        "All child issue readiness results close-ready.",
+        "End-to-end live run proving dynamic expansion, mutation deltas, coverage scheduler, and replay."
+      ]
+    }
+  ],
+  "closeReadyIssues": [],
+  "openBlockedIssues": [
+    195,
+    199,
+    200,
+    201,
+    25
+  ],
+  "doNotClaim": [
+    "Do not close or market #195, #199, #200, #201, #25 as implemented until closeCommandAllowed=true.",
+    "Do not replace missing live evidence with issue comments.",
+    "Do not claim full semantic compiler completion while any child issue remains open-blocked."
+  ]
+}
